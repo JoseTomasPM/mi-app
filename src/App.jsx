@@ -1,10 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { AuthProvider } from "./context/useAuth";
 import PrivateRoute from "./components/PrivateRoute";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import ProductsPage from "./pages/ProductsPage";
-
+import { AuthProvider } from "./context/AuthContext";
 export default function App() {
     return (
         <AuthProvider>
