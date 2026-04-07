@@ -1,7 +1,7 @@
 ﻿import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://proapi-arwk.onrender.com",  // ← cambia esto por tu URL
+    baseURL: "https://proapi-arwk.onrender.com",  
 });
 
 // Interceptor: añade el JWT en cada petición

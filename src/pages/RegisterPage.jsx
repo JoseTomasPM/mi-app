@@ -15,8 +15,14 @@ export default function RegisterPage() {
         try {
             await register(form.name, form.email, form.password);
             navigate("/login");
-        } catch {
-            setError("El email ya est� registrado.");
+        } catch (err) {
+            console.log(err);
+
+            const msg =
+                err.response?.data?.error ||
+                "Error real desconocido";
+
+            setError(msg);
         }
     }
 
