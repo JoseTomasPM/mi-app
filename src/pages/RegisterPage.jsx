@@ -16,11 +16,12 @@ export default function RegisterPage() {
             await register(form.name, form.email, form.password);
             navigate("/login");
         } catch (err) {
-            console.log(err);
-
+            console.log(err); // clave para debug
             const msg =
                 err.response?.data?.error ||
-                "Error real desconocido";
+                err.response?.data?.message ||
+                err.message ||
+                "Error desconocido";
 
             setError(msg);
         }
